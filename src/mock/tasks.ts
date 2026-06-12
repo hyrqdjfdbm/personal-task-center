@@ -1,0 +1,61 @@
+import type { TaskItem } from '../types/task'
+
+export const initialTasks: TaskItem[] = [
+  {
+    id: 'task-001',
+    projectName: '城市更新示范片区建设项目',
+    sourceModule: 'warning',
+    title: '事项节点「四委两局会议」即将超期，提前10天提醒，计划完成时间：2026-01-01。',
+    status: 'pending_dispose',
+    receiveTime: '2026-06-10 09:15:00',
+    planFinishTime: '2026-01-01',
+    detail:
+      '该事项节点距离计划完成时间不足 10 天，请尽快推进相关准备工作并反馈当前进展。',
+  },
+  {
+    id: 'task-002',
+    projectName: '轨道交通三期工程',
+    sourceModule: 'leader_assign',
+    title: '项目推进滞缓',
+    status: 'pending_dispose',
+    receiveTime: '2026-06-09 14:30:00',
+    detail: '领导交办事项：某重点项目推进进度明显滞后，需牵头部门梳理堵点并制定赶工计划。',
+  },
+  {
+    id: 'task-003',
+    projectName: '智慧园区综合管理平台',
+    sourceModule: 'coordination',
+    title: '难以推进，请各部门协助解决',
+    status: 'pending_review',
+    receiveTime: '2026-06-08 11:20:00',
+    detail:
+      '跨部门协调事项已提交处置结果，请审核部门确认是否满足协调要求，并给出审核意见。',
+  },
+  {
+    id: 'task-004',
+    projectName: '重点民生实事推进工程',
+    sourceModule: 'leader_assign',
+    title: '专项督查反馈材料补充确认',
+    status: 'pending_confirm',
+    receiveTime: '2026-06-07 16:45:00',
+    detail: '督查反馈材料已提交，请查阅处置结果并确认已知悉相关内容。',
+  },
+  {
+    id: 'task-005',
+    projectName: '重点民生实事推进工程',
+    sourceModule: 'leader_assign',
+    title: '专项督查反馈材料补充',
+    status: 'pending_dispose',
+    receiveTime: '2026-06-06 10:00:00',
+    detail: '请在本周内补充专项督查反馈材料，重点说明整改措施与完成时限。',
+  },
+  {
+    id: 'task-006',
+    projectName: '产业园区扩区升级项目',
+    sourceModule: 'coordination',
+    title: '用地审批环节需多部门联审',
+    status: 'pending_confirm',
+    receiveTime: '2026-06-05 08:50:00',
+    detail: '协调结果已同步至各相关部门，请查阅并确认已知悉联审安排。',
+  },
+]
