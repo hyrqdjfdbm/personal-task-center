@@ -34,7 +34,12 @@ const filteredTasks = computed(() => {
   return tasks.value.filter((task) => {
     const matchSource = sourceFilter.value === 'all' || task.sourceModule === sourceFilter.value
     const matchStatus = statusFilter.value === 'all' || task.status === statusFilter.value
-    const matchKeyword = !kw || task.title.toLowerCase().includes(kw)
+    const matchKeyword =
+      !kw ||
+      task.title.toLowerCase().includes(kw) ||
+      task.projectCode.toLowerCase().includes(kw) ||
+      task.projectName.toLowerCase().includes(kw) ||
+      (task.projectShortName?.toLowerCase().includes(kw) ?? false)
     return matchSource && matchStatus && matchKeyword
   })
 })

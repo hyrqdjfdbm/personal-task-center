@@ -3,7 +3,9 @@ import type { TaskItem } from '../types/task'
 export const initialTasks: TaskItem[] = [
   {
     id: 'task-001',
+    projectCode: 'XM-2026-001',
     projectName: '城市更新示范片区建设项目',
+    projectShortName: '城市更新示范',
     sourceModule: 'warning',
     title: '事项节点「四委两局会议」即将超期，提前10天提醒，计划完成时间：2026-01-01。',
     status: 'pending_dispose',
@@ -14,7 +16,9 @@ export const initialTasks: TaskItem[] = [
   },
   {
     id: 'task-002',
+    projectCode: 'XM-2026-002',
     projectName: '轨道交通三期工程',
+    projectShortName: '轨交三期',
     sourceModule: 'leader_assign',
     title: '项目推进滞缓',
     status: 'pending_dispose',
@@ -23,7 +27,9 @@ export const initialTasks: TaskItem[] = [
   },
   {
     id: 'task-003',
+    projectCode: 'XM-2026-003',
     projectName: '智慧园区综合管理平台',
+    projectShortName: '智慧园区',
     sourceModule: 'coordination',
     title: '难以推进，请各部门协助解决',
     status: 'pending_review',
@@ -33,7 +39,9 @@ export const initialTasks: TaskItem[] = [
   },
   {
     id: 'task-004',
+    projectCode: 'XM-2026-004',
     projectName: '重点民生实事推进工程',
+    projectShortName: '民生实事',
     sourceModule: 'leader_assign',
     title: '专项督查反馈材料补充确认',
     status: 'pending_confirm',
@@ -42,7 +50,9 @@ export const initialTasks: TaskItem[] = [
   },
   {
     id: 'task-005',
+    projectCode: 'XM-2026-004',
     projectName: '重点民生实事推进工程',
+    projectShortName: '民生实事',
     sourceModule: 'leader_assign',
     title: '专项督查反馈材料补充',
     status: 'pending_dispose',
@@ -51,7 +61,9 @@ export const initialTasks: TaskItem[] = [
   },
   {
     id: 'task-006',
+    projectCode: 'XM-2026-005',
     projectName: '产业园区扩区升级项目',
+    projectShortName: '园区扩区',
     sourceModule: 'coordination',
     title: '用地审批环节需多部门联审',
     status: 'pending_confirm',

@@ -36,7 +36,10 @@ function handleAction(task: TaskItem, action: TaskAction) {
         </a-tag>
         <span class="task-card__time">接收时间：{{ task.receiveTime }}</span>
       </div>
-      <p class="task-card__project">{{ task.projectName }}</p>
+      <p class="task-card__project">
+        <span class="task-card__project-name">{{ task.projectName }}</span>
+        <span class="task-card__project-code">{{ task.projectCode }}</span>
+      </p>
       <h3 class="task-card__title">{{ task.title }}</h3>
     </div>
     <div class="task-card__action">
@@ -97,11 +100,25 @@ function handleAction(task: TaskItem, action: TaskAction) {
 }
 
 .task-card__project {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--spacing-xs);
   margin: 0 0 var(--spacing-3xs);
+  line-height: 1.5;
+}
+
+.task-card__project-name {
   font-size: var(--font-size-base);
   font-weight: 600;
-  line-height: 1.5;
   color: var(--color-text-primary);
+}
+
+.task-card__project-code {
+  font-size: var(--font-size-small);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
 .task-card__title {

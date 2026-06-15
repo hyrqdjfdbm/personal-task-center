@@ -6,7 +6,9 @@ export type TaskAction = 'dispose' | 'close' | 'review' | 'finish'
 
 export interface TaskItem {
   id: string
+  projectCode: string
   projectName: string
+  projectShortName?: string
   sourceModule: SourceModule
   title: string
   status: TaskStatus

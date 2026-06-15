@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { watch } from 'vue'
 import type { SourceModule, TaskStatus } from '../../types/task'
 import { SOURCE_MODULE_LABEL, TASK_STATUS_LABEL } from '../../constants/task'
 
@@ -15,6 +16,12 @@ const statusOptions = [
   { label: '全部状态', value: 'all' },
   ...Object.entries(TASK_STATUS_LABEL).map(([value, label]) => ({ label, value })),
 ]
+
+watch(sourceModule, (value) => {
+  if (value === 'all') {
+    status.value = 'all'
+  }
+})
 </script>
 
 <template>
@@ -22,11 +29,16 @@ const statusOptions = [
     <a-input-search
       v-model:value="keyword"
       allow-clear
-      placeholder="搜索任务标题"
-      style="width: 280px"
+      placeholder="搜索项目代码｜项目名称｜项目简称"
+      style="width: 320px"
     />
     <a-select v-model:value="sourceModule" :options="sourceOptions" style="width: 160px" />
-    <a-select v-model:value="status" :options="statusOptions" style="width: 180px" />
+    <a-select
+      v-if="sourceModule !== 'all'"
+      v-model:value="status"
+      :options="statusOptions"
+      style="width: 180px"
+    />
   </div>
 </template>
 
